@@ -1,0 +1,17 @@
+body {
+
+  margin: 0;
+  background: #22132e;
+  font-family: lexend,segoe ui,roboto,helvetica neue,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h2{
+    margin :0;
+}

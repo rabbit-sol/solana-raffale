@@ -523,14 +523,14 @@ const Home = (props: HomeProps) => {
                         fontWeight: "bold",
                       }}
                     >
-                      {`${itemsRemaining}`} /1000
+                      {`${itemsRemaining}`}
                     </Typography>
                   </Grid>
                   <Grid item xs={4}>
                     <Typography variant="body2" color="textSecondary">
                       {isWhitelistUser && discountPrice
                         ? "Discount Price($ROLLS)"
-                        : "Price($ROLLS)"}
+                        : "Price ($ROLLS)"}
                     </Typography>
                     <Typography
                       variant="h6"
@@ -614,7 +614,7 @@ const Home = (props: HomeProps) => {
             display="block"
             style={{ marginTop: 7, color: "grey" }}
           >
-            Powered by THE SUSHIES
+              Powered by <a href="https://discord.gg/66mRrWEFUT" >THE SUSHIES</a>
             </Typography>
           </div>
         </Paper>

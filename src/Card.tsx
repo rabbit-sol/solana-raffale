@@ -32,8 +32,8 @@ export const Card = () => {
         </div>
 
         <div className="maindiv">
-          <h4 className="info">FP: 1.36</h4>
-          <h4 className="info">TTV: 1.65</h4>
+          <h4 className="info">ROLLS: 10.0</h4>
+          <h4 className="info">SOL: 0.1</h4>
         </div>
         <div >
           <img className="raffaleimage" src="https://pbs.twimg.com/media/FojPwA4XsAQqoe7?format=jpg&name=large" loading="lazy"/>

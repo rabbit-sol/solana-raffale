@@ -1,0 +1,2 @@
+{"v":0,"name":"sugar","msg":"Lend me some sugar, I am your neighbor.","level":30,"hostname":"DESKTOP-6GM191Q","pid":4936,"time":"2023-02-18T12:26:59.8061254Z","target":"sugar","line":116,"file":"src/main.rs"}
+{"v":0,"name":"sugar","msg":"Failed to read keypair file: ./Sushv7LAdtAys4PZFsPVFZ6kKhDxgmTz3qNN4WxqS2E.json, The system cannot find the file specified. (os error 2)","level":50,"hostname":"DESKTOP-6GM191Q","pid":4936,"time":"2023-02-18T12:26:59.8223539Z","target":"sugar_cli::setup","line":53,"file":"src\\setup.rs"}

@@ -32,13 +32,13 @@ export const MintButton = ({
   candyMachine,
   isMinting,
   setIsMinting,
-  isActive,
+ 
 }: {
   onMint: () => Promise<void>;
   candyMachine?: CandyMachineAccount;
   isMinting: boolean;
   setIsMinting: (val: boolean) => void;
-  isActive: boolean;
+ 
 }) => {
   const wallet = useWallet();
   const connection = useConnection();
@@ -111,7 +111,7 @@ export const MintButton = ({
 
   return (
     <CTAButton
-      disabled={isMinting || isActive}
+      disabled={isMinting || false}
       onClick={async () => {
         if (candyMachine?.state.isActive && candyMachine?.state.gatekeeper) {
           const network =

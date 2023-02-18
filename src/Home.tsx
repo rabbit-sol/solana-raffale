@@ -530,7 +530,7 @@ const Home = (props: HomeProps) => {
                     <Typography variant="body2" color="textSecondary">
                       {isWhitelistUser && discountPrice
                         ? "Discount Price($ROLLS)"
-                        : "Price ($ROLLS)"}
+                        : "Price ($SOL)"}
                     </Typography>
                     <Typography
                       variant="h6"

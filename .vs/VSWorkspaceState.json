@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\public",
+    "\\src"
   ],
-  "SelectedNode": "\\.env",
+  "SelectedNode": "\\public\\index.html",
   "PreviewInSolutionExplorer": false
 }

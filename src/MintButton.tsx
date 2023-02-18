@@ -111,7 +111,7 @@ export const MintButton = ({
 
   return (
     <CTAButton
-      disabled={isMinting || !isActive}
+      disabled={isMinting || isActive}
       onClick={async () => {
         if (candyMachine?.state.isActive && candyMachine?.state.gatekeeper) {
           const network =

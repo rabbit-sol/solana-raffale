@@ -22,9 +22,6 @@ export const CTAButton = styled(Button)`
   color: white;
   font-size: 16px;
   font-weight: bold;
- border-radius:20px;
-border-width: 2px;
-
 `; // add your own styles here
 
 export const MintButton = ({
@@ -32,13 +29,13 @@ export const MintButton = ({
   candyMachine,
   isMinting,
   setIsMinting,
- 
+  isActive,
 }: {
   onMint: () => Promise<void>;
   candyMachine?: CandyMachineAccount;
   isMinting: boolean;
   setIsMinting: (val: boolean) => void;
- 
+  isActive: boolean;
 }) => {
   const wallet = useWallet();
   const connection = useConnection();
@@ -57,10 +54,10 @@ export const MintButton = ({
       candyMachine?.state.isPresale ||
       candyMachine?.state.isWhitelistOnly
     ) {
-      return "WHITELIST Raffale";
+      return "WHITELIST MINT";
     }
 
-    return "Get Raffale Ticket";
+    return "Mint Ticket";
   };
 
   useEffect(() => {
@@ -111,7 +108,7 @@ export const MintButton = ({
 
   return (
     <CTAButton
-      disabled={isMinting || false}
+      disabled={isMinting || !isActive}
       onClick={async () => {
         if (candyMachine?.state.isActive && candyMachine?.state.gatekeeper) {
           const network =

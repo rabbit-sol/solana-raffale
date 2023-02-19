@@ -70,11 +70,10 @@ const Home = (props: HomeProps) => {
   const [itemsRemaining, setItemsRemaining] = useState<number>();
   const [isWhitelistUser, setIsWhitelistUser] = useState(false);
   const [isPresale, setIsPresale] = useState(false);
-  const [, setIsValidBalance] = useState(false);
   const [discountPrice, setDiscountPrice] = useState<anchor.BN>();
   const [needTxnSplit, setNeedTxnSplit] = useState(true);
   const [setupTxn, setSetupTxn] = useState<SetupState>();
-
+  const [isValidBalance, setIsValidBalance] = useState(false);
   const rpcUrl = props.rpcHost;
   const anchorWallet = useAnchorWallet();
   const { connect, connected, publicKey, wallet } = useWallet();
@@ -473,10 +472,10 @@ const Home = (props: HomeProps) => {
       <Container maxWidth="xs" style={{ position: "relative" }}>
         <Paper
           style={{
-            padding: 24,
+            padding: 0,
             paddingBottom: 10,
             backgroundColor: "#151A1F",
-            borderRadius: 6,
+            borderRadius: 25,
           }}
         >
           <Card />
@@ -619,7 +618,10 @@ const Home = (props: HomeProps) => {
                       isMinting={isUserMinting}
                       setIsMinting={(val) => setIsUserMinting(val)}
                       onMint={onMint}
-                   
+                            isActive={
+                              isActive ||
+                              (isPresale && isWhitelistUser && isValidBalance)
+                            }
                     />
                   </GatewayProvider>
                 ) : (
@@ -628,7 +630,10 @@ const Home = (props: HomeProps) => {
                     isMinting={isUserMinting}
                     setIsMinting={(val) => setIsUserMinting(val)}
                     onMint={onMint}
-                
+                          isActive={
+                            isActive ||
+                            (isPresale && isWhitelistUser && isValidBalance)
+                          }
                   />
                 )}
               </MintContainer>
@@ -640,7 +645,7 @@ const Home = (props: HomeProps) => {
             display="block"
             style={{ marginTop: 7, color: "grey" }}
           >
-            Powered by METAPLEX
+            Powered by The Sushies
             </Typography>
             </div>
         </Paper>
